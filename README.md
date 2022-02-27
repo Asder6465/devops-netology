@@ -2,16 +2,20 @@
 
 # Задание №1 - Подготовка рабочей среды
 
+1. Terraform
 ![Terraform](https://github.com/Asder6465/devops-netology/blob/main/Terraforms.png)
 
+2. Bash
+![Bash](https://github.com/Asder6465/devops-netology/blob/main/Bash.png)
 
-[Bash](https://github.com/Asder6465/devops-netology/blob/main/Bash.png)
+3. Markdown
+![Markdown](https://github.com/Asder6465/devops-netology/blob/main/Markdown.png)
 
-[Markdown](https://github.com/Asder6465/devops-netology/blob/main/Markdown.png)
+4. YAML
+![YAML](https://github.com/Asder6465/devops-netology/blob/main/YAML.png)
 
-[YAML](https://github.com/Asder6465/devops-netology/blob/main/YAML.png)
-
-## Jsonnet
+5. Jsonnet
+![Jsonnet](https://github.com/Asder6465/devops-netology/blob/main/Jsonnet.png)
 
 
 # Задание №2 - Описание жизненного цикла задачи (разработки нового функционала)
