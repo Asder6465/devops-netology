@@ -5,15 +5,11 @@
 ## Terraform
 
 
-[Bash] (https://github.com/Asder6465/devops-netology/blob/main/Bash.png)
+[Bash](https://github.com/Asder6465/devops-netology/blob/main/Bash.png)
 
-## Markdown
+[Markdown](https://github.com/Asder6465/devops-netology/blob/main/Markdown.png)
 
-
-## Yaml
-
-
-
+[YAML](https://github.com/Asder6465/devops-netology/blob/main/YAML.png)
 
 ## Jsonnet
 
