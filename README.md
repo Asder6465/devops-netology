@@ -5,8 +5,7 @@
 ## Terraform
 
 
-[https://github.com/Asder6465/devops-netology/blob/main/Bash.png] 
-
+[ https://github.com/Asder6465/devops-netology/blob/main/Bash.png ] (Bash)
 
 ## Markdown
 
