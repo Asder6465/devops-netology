@@ -2,7 +2,7 @@
 
 # Задание №1 - Подготовка рабочей среды
 
-## Terraform
+![Terraform](https://github.com/Asder6465/devops-netology/blob/main/Terraforms.png)
 
 
 [Bash](https://github.com/Asder6465/devops-netology/blob/main/Bash.png)
