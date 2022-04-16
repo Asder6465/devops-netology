@@ -1,84 +1,48 @@
-# devops-netology
-
-# Домашнее задание к занятию «2.2. Основы Git»
-
-## Задание №1
-=============================
-
-Синхронизирую все репозитории
-
-Теперь добавлены тэги. Легковесный v0.0 и аннотированный v0.1
+# Домашнее задание «2.4. Инструменты Git» 
 
 
-=============================
+1. Комит, хеш которого начинается на aefea имеет полный хеш aefead2207ef7e2aa5dc81a34aedf0cad4c32545. Коментарий: Update CHANGELOG.md
+2. Коммит 85024d3 имеет тег v0.12.23
+3. У коммита b8d720 два родителя - 56cd7859e и 9ea88f22f
+4. Между тегами v0.12.23 и v0.12.24 было сделано 9 коммитов
 
-## Ниже идут задания прошлых работ. Чисто для личного контроля изменений
+    33ff1c03b (tag: v0.12.24) v0.12.24
 
-=============================
+       b14b74c49 [Website] vmc provider links
 
-#devops-netology
+       3f235065b Update CHANGELOG.md
 
-#Домашнее задание к занятию «2.1. Системы контроля версий.»
+       6ae64e247 registry: Fix panic when server is unreachable
 
-##Задание №1 – Создать и настроить репозиторий для дальнейшей работы на курсе.
+       5c619ca1b website: Remove links to the getting started guide's old location
+    
+       06275647e Update CHANGELOG.md
 
-**/.terraform/ - игнорирует все файлы внутри каталога .terraform
+       d5f9411f5 command: Fix bug when using terraform login on Windows
 
-В текущем каталоге игнорирует файлы служебные файлы.
+       4b6d06cc5 Update CHANGELOG.md
 
-====================================================
-Доработка домашнего задания
+       dd01a3507 Update CHANGELOG.md
 
-**/.terraform/ - игнорирует все файлы внутри каталога .terraform, созданного в локальной директории
+       225466bc3 Cleanup after v0.12.23 release
 
-Далее игнорируются все файлы состояния, имеющие расширение tfstate, а также если к этому расширению добавлено любое дополнение после точки.
-
-Игнорируются файлы логов crash.log, в том числе и архивыне логи, имеющие дополнительное расширение, например crash.001.log
-
-Также исключаются файлы, чувствительные к данным, например логины/пароли. Это файлы с расширением tfvars, а так же эти же файлы, преобразованные в json-последовательность
-
-Игнорируется группа файлов override.tf, override.tf.json, а также под это определение попадают все файлы, имеющие в своем названии _override.tf, _override.tf.json
-
-Ну и к игнору добавлены файлы .terraformrc и terraform.rc
+    85024d310 (tag: v0.12.23) v0.12.23
 
 
-# Задание №1 - Подготовка рабочей среды
+5. Функция func providerSource(configs []*cliconfig.ProviderInstallation, services *disco.Disco) (getproviders.Source, tfdiags.Diagnostics) находится на 23-й строке в файле provider_source.go была введена в коммите 8c928e835 main: Consult local directories as potential mirrors of providers
+6. Изменение функции globalPluginDirs происходило в трех коммитах:
 
-1. Terraform
-![Terraform](https://github.com/Asder6465/devops-netology/blob/main/Terraforms.png)
+    35a058fb3 main: configure credentials from the CLI config file
 
-2. Bash
-![Bash](https://github.com/Asder6465/devops-netology/blob/main/Bash.png)
+    c0b176109 prevent log output during init
 
-3. Markdown
-![Markdown](https://github.com/Asder6465/devops-netology/blob/main/Markdown.png)
+    8364383c3 Push plugin discovery down into command package
 
-4. YAML
-![YAML](https://github.com/Asder6465/devops-netology/blob/main/YAML.png)
+7. Функция synchronizedWriters описана в коммите 5ac311e2a
 
-5. Jsonnet
-![Jsonnet](https://github.com/Asder6465/devops-netology/blob/main/Jsonnet.png)
+    Author: Martin Atkins <mart@degeneration.co.uk>
+
+    Date:   Wed May 3 16:25:41 2017 -0700
 
 
-# Задание №2 - Описание жизненного цикла задачи (разработки нового функционала)
 
-1. Обсуждение задачи, разбиение ее на функциональные фрагменты, назначение исполнителей.
-2. Алгоритмизация
-3. Проверка совместимости алгоритмов частей.
-4. Разработка кода отдельных фрагментов.
-5. Тестирование работоспособности. 
-6. Исправление ошибок кода. 
-7. Демонстрация клиенту работы отдельных функциональных узлов.
-8. Доработка функционала по рекомендациям клиента
-9. Сборка кода в единую программу.
-10. Тестирование работоспособности.
-11. Проведение оптимизации кода
-12. Повторное тестирование после оптимизации
-13. Проведение демонстрации пользователю полнофункциональной системы
-14. Устранение замечаний и принятие рекомендаций клиента к усовершенствованию
-15. По настоянию клиента отправлять на на усовершенствование сразу.
-16. Оформление пользовательской документации
-17. Передача рабочей версии клиенту.
-18. Гарантийное сопровождение системы у заказчика с исправлением замечаний
-19. Принятие решения об усовершенствовании системы
-20. Если решение положительное, переходим к П.1
