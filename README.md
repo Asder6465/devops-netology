@@ -1,48 +1,41 @@
-# Домашнее задание «2.4. Инструменты Git» 
+# Домашнее задание к занятию "3.1. Работа в терминале, лекция 1" 
 
 
-1. Комит, хеш которого начинается на aefea имеет полный хеш aefead2207ef7e2aa5dc81a34aedf0cad4c32545. Коментарий: Update CHANGELOG.md
-2. Коммит 85024d3 имеет тег v0.12.23
-3. У коммита b8d720 два родителя - 56cd7859e и 9ea88f22f
-4. Между тегами v0.12.23 и v0.12.24 было сделано 9 коммитов
-
-    33ff1c03b (tag: v0.12.24) v0.12.24
-
-       b14b74c49 [Website] vmc provider links
-
-       3f235065b Update CHANGELOG.md
-
-       6ae64e247 registry: Fix panic when server is unreachable
-
-       5c619ca1b website: Remove links to the getting started guide's old location
+1. Oracle VirtualBox установлен без проблем
+2. Vagrant установил скачав через немецкий VPS-сервер
+3. В Windows в качестве терминала использовал просто окно командной строки.
+4. Скачал VPN Windscibe, это позволило Vagrant скачать и установить Ubuntu 20.04
+5. По умолчанию виртуалка получила 1024 Мб памяти, 2 виртуальных процессора, 4Мб видеопамяти
+6. Количество ресурсов можно изменять либо в VagrantFile:
+  v.memory = 1024
+  v.cpus = 2
+  или командами ВМ
+    config.vm.provider "virtualbox" do |vb|
+      vb.memory = "1024"
+      vb.cpu = "2"
+    end
+7. Ну да, фактически сразу оказываемся внутри виртуалки, минуя логин.
+8. Число команд, хранимых в HISTORY, регулируется переменными HISTSIZE (строка 862) или HISTFILESIZE (строка 846) для установки размера файла истори. Директива ignoreboth является совместной "склейкой" директив ignorespace (не сохранять команды начинающиеся с пробела) и ignoredups (не сохранять команду, если такая уже имеется в истории)
+9. {} - зарезервированные слова, список, используются в условных циклах, ограничивают тело функции или массив. В командах выполняет подстановку элементов из списка, например команда mkdir ./DIR_{A..Z} создаст несколько каталогов с именами DIR_A, DIR_B,.....DIR_Z
+10. touch {000001..100000}.txt. Сильно много файлов создать не удастся, так как такая конструкция передает аргументы команде в виде списка, который при 300 000 становится слишком длинным.
+11. Конструкция [[ -d /TMP ]] проверяет наличие директории /TMP и возвращает соответственно 0 или 1
+12. Тут немного не разобрался. Type -a bash выведет строки
+        bash is /usr/bin/bash
+        bash is /bin/bash
+    При попытке перенсти файл в каталог /usr/local/bin/ командой sudo mv /usr/bin/bash /usr/local/bin/, строк становится три
+        bash is /usr/local/bin/bash
+        bash is /usr/bin/bash
+        bash is /bin/bash
+    что не совпадает с заданием и добиться именно двух строк я не смог. А в целом:
     
-       06275647e Update CHANGELOG.md
-
-       d5f9411f5 command: Fix bug when using terraform login on Windows
-
-       4b6d06cc5 Update CHANGELOG.md
-
-       dd01a3507 Update CHANGELOG.md
-
-       225466bc3 Cleanup after v0.12.23 release
-
-    85024d310 (tag: v0.12.23) v0.12.23
-
-
-5. Функция func providerSource(configs []*cliconfig.ProviderInstallation, services *disco.Disco) (getproviders.Source, tfdiags.Diagnostics) находится на 23-й строке в файле provider_source.go была введена в коммите 8c928e835 main: Consult local directories as potential mirrors of providers
-6. Изменение функции globalPluginDirs происходило в трех коммитах:
-
-    35a058fb3 main: configure credentials from the CLI config file
-
-    c0b176109 prevent log output during init
-
-    8364383c3 Push plugin discovery down into command package
-
-7. Функция synchronizedWriters описана в коммите 5ac311e2a
-
-    Author: Martin Atkins <mart@degeneration.co.uk>
-
-    Date:   Wed May 3 16:25:41 2017 -0700
+    mkdir /tmp/new_path_dir/
+    PATH=/tmp/new_path_dir/:$PATH
+    cp /bin/bash /tmp/new_path_dir/
+13. at - команда запускается в указанное время (в параметре), batch без параметров сразу запускает командную оболочку
+14. 
+    exit
+    vagrant halt
+    
 
 
 
